@@ -12,7 +12,7 @@ class UserShow extends React.Component {
    
 
     render() {
-        console.log('usershow props', this.props)
+       // console.log('usershow props', this.props)
         return (
             <div> 
                 {this.props.user ? (
