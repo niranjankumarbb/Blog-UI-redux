@@ -7,6 +7,8 @@ import postsReducer from '../reducers/postsReducer'
 
 
 const configureStore = () => {
+    console.log('entered configurestore ')
+
     const store = createStore(combineReducers({
         users: usersReducer,
         posts : postsReducer,

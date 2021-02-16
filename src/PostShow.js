@@ -1,4 +1,3 @@
-
 import React from 'react' 
 import {Link} from 'react-router-dom'
 import { connect } from 'react-redux'
@@ -7,26 +6,19 @@ import {startGetComments} from './actions/commentsAction'
 import {startGetUsers} from './actions/usersAction'
 import {startGetPosts} from './actions/postsAction'
 
-
-
-class PostShow extends React.Component {
-    
+class PostShow extends React.Component {    
    
     componentDidMount(){
-        if (this.props.users.length === 0 ) {
+         if (this.props.users.length === 0 ) {
             this.props.dispatch(startGetUsers())
             this.props.dispatch(startGetPosts())
           }
           if (this.props.postComments.length === 0) {
             this.props.dispatch(startGetComments())
           }
-        }
-          
-    
+        } 
     
     render() {
-         console.log('new postshow', this.props)
-
         return (
             <div> 
                  {(this.props.post && this.props.users.length>0) ? (
@@ -43,24 +35,19 @@ class PostShow extends React.Component {
                              } )}
                     </ul> 
 
-                    <Link to={`/users/${this.props.post.userId}`} >More posts of the authors</Link>                
+                    <Link to={`/users/${this.props.post.userId}`} className="btn btn-link">More posts of the authors</Link>                
                     
                     </div>
                 ) : (
                     <p> loading ...</p>
-                )}
-                 
-                
-
-               
+                )}  
             </div> 
         )
     }
 }
 
 const mapStateToProps = (state, props)=>{
-    console.log('postshow params', props.match.params.id)
-    return {
+     return {
         postComments:state.comments.filter(comment=> comment.postId == props.match.params.id),
         post : state.posts.find(post=> post.id == props.match.params.id),
         users : state.users

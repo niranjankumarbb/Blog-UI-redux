@@ -1,8 +1,7 @@
-
 import React from 'react'
 
 function Home(props){
-    console.log(props)
+    console.log('home',props)
     return (
         <div>
             <h1>  Welcome to the blog</h1>

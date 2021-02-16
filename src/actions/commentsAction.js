@@ -2,6 +2,8 @@ import axios from "axios"
 
 //async
 export const startGetComments =()=>{
+    console.log('entered commentsaction async')
+
     return (dispatch)=>{
         axios.get('https://jsonplaceholder.typicode.com/comments')
         .then(response=>{
@@ -14,5 +16,7 @@ export const startGetComments =()=>{
 
 //sync
 export const setComments=(comments)=>{
+    console.log('entered commentsaction sync')
+
     return { type : 'SET_COMMENTS', payload : comments}
 }
