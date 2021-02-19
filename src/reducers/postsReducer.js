@@ -1,17 +1,14 @@
 const postsInitialState = []
 
-const postsReducer = (state = postsInitialState, action) => {
-    console.log('entered postsreducer')
-
+const postsReducer = (state = postsInitialState, action) => { 
     switch(action.type) {
+        
         case 'SET_POSTS' : {
-            console.log("postreducer SET_POSTS ENTERED")
-            return [].concat(action.payload)
+             return [].concat(action.payload)
         }
-        default: {
-            console.log('entered postreduce default')
 
-            // return [...state]
+        default: {
+             // return [...state]
             return [].concat(state)
         }
     }

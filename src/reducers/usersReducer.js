@@ -1,17 +1,13 @@
-
 const usersInitialState = []
 
-const usersReducer = (state = usersInitialState, action)=>{
-    console.log('entered userreducer')
-
+const usersReducer = (state = usersInitialState, action)=>{ 
     switch (action.type){
+
         case 'SET_USERS' : {
             return [].concat(action.payload)
         }
 
-        default : {
-            console.log('entered userreducer default')
-
+        default : { 
             return [].concat(state)
         }
     }

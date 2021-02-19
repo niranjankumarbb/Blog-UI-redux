@@ -1,13 +1,7 @@
 import axios from "axios"
 
-//async
-export const startGetPosts =()=>{
-    console.log('entered postaction async')
-
+export const startGetPosts =()=>{ 
     return (dispatch)=>{
-        console.log('entered postaction async inside return')
-
-
         axios.get('http://jsonplaceholder.typicode.com/posts')
         .then(response=>{
             console.log('postaction async then response', response.data)
@@ -20,9 +14,6 @@ export const startGetPosts =()=>{
     }
 }
 
-//sync
-export const setPosts=(posts)=>{
-    console.log('entered postaction sync')
-
+export const setPosts=(posts)=>{ 
     return { type : 'SET_POSTS', payload : posts}
 }

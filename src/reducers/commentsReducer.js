@@ -1,16 +1,13 @@
 const commentsInitialState = []
 
-const commentsReducer = (state= commentsInitialState, action)=>{
-    console.log('entered commentsreducer')
-
+const commentsReducer = (state= commentsInitialState, action)=>{ 
     switch(action.type){
+
         case 'SET_COMMENTS' : {
         return [].concat(action.payload)
         }
 
-        default : {
-            console.log('entered commentsreducer default')
-
+        default : { 
             return [].concat(state)
         }
     }
