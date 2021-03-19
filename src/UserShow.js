@@ -6,7 +6,7 @@ import {startGetPosts} from './actions/postsAction'
 import {getUsers}  from './actions/usersAction'
 
 
-    function UserShow(){   
+    function UserShow(props){   
  
          return (
             <div> 
