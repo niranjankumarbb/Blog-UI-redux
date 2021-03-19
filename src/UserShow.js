@@ -6,11 +6,8 @@ import {startGetPosts} from './actions/postsAction'
 import {getUsers}  from './actions/usersAction'
 
 
-class UserShow extends React.Component {
-   
-   
-
-    render(){ 
+    function UserShow(){   
+ 
          return (
             <div> 
                 {this.props.user ? (
@@ -29,7 +26,7 @@ class UserShow extends React.Component {
             </div> 
         )
     }
-}
+
 
 const mapStateToProps = (state, props)=>{ 
      return {

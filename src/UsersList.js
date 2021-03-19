@@ -9,9 +9,7 @@ class UsersList extends React.Component{
    
   
     componentDidMount(){
-        // console.log('entered userelist cdm')
-
-        if(this.props.users.length===0){
+         if(this.props.users.length===0){
             this.props.dispatch(startGetUsers())
         }
       }     
