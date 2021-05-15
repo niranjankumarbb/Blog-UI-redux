@@ -28,14 +28,13 @@ class PostShow extends React.Component {
                       <h4>Body : {this.props.post.body} </h4>
 
                       <h4>Comments </h4>
-
-                       <ul>{
+                      <ul>{
                             this.props.postComments.map(comment=>{
                             return <li key={comment.id}>{comment.body} </li>
                              } )}
-                    </ul> 
+                      </ul> 
 
-                    <Link to={`/users/${this.props.post.userId}`} className="btn btn-link">More posts of the authors</Link>                
+                      <Link to={`/users/${this.props.post.userId}`} className="btn btn-link">More posts of the authors</Link>                
                     
                     </div>
                 ) : (
