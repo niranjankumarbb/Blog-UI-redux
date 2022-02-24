@@ -4,10 +4,8 @@ import {Link} from 'react-router-dom'
 import { connect } from 'react-redux'
 import { startGetUsers } from './actions/usersAction'
 
-
 class UsersList extends React.Component{
-   
-  
+     
     componentDidMount(){
          if(this.props.users.length===0){
             this.props.dispatch(startGetUsers())
