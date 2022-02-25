@@ -13,13 +13,13 @@ class UsersList extends React.Component{
       }     
 
     render(){       
-        return (
+      return (
         <div>
             <h1> Users List - {this.props.users.length}</h1>
             <ul>
                 {
-                    this.props.users.map((user)=>{
-                        return <li key={user.id}><Link to={`/users/${user.id}`} className="btn btn-primary">{user.name}</Link></li>
+                   this.props.users.map((user)=>{
+                       return <li key={user.id}><Link to={`/users/${user.id}`} className="btn btn-primary">{user.name}</Link></li>
                     })
                 }
             </ul>
