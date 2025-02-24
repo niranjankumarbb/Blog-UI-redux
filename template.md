@@ -1,0 +1,2 @@
+Jsonplaceholder API demo
+redux
