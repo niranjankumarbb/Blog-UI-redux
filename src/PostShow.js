@@ -9,19 +9,19 @@ import {startGetPosts} from './actions/postsAction'
 class PostShow extends React.Component {    
    
     componentDidMount(){
-         if (this.props.users.length === 0 ) {
-            this.props.dispatch(startGetUsers())
-            this.props.dispatch(startGetPosts())
-          }
-          if (this.props.postComments.length === 0) {
-            this.props.dispatch(startGetComments())
-          }
+            if (this.props.users.length === 0 ) {
+                this.props.dispatch(startGetUsers())
+                this.props.dispatch(startGetPosts())
+            }
+            if (this.props.postComments.length === 0) {
+                this.props.dispatch(startGetComments())
+            }
         } 
     
     render() {
         return (
             <div> 
-                 {(this.props.post && this.props.users.length>0) ? (
+                 {(this.props.post && this.props.users.length>0) ?   (
                     <div> 
                         <h2>User Name : {this.props.users.find(user=> user.id === this.props.post.userId).name}</h2>
                       <h4>Title : {this.props.post.title} </h4>
@@ -35,10 +35,10 @@ class PostShow extends React.Component {
                       </ul> 
 
                       <Link to={`/users/${this.props.post.userId}`} className="btn btn-link">More posts of the authors</Link>                
-                    
+                  
                     </div>
                 ) : (
-                    <p> loading ...</p>
+                    <p> Loading ...</p>
                 )}  
             </div> 
         )
